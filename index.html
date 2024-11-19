@@ -21,6 +21,15 @@
 </head>
 
 <body>
+<div class="container-mensagens" id="container-mensagens">
+
+</div>
+    <a class="botao-carrinho hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
+
+        <div class="badge-total-carrinho" onclick="cardapio.metodos.abrirCarrinho(true)">0</div>
+        <i class="fa fa-shopping-bag"></i>
+
+    </a>
 
     <section class="header">
 
@@ -64,6 +73,7 @@
 
                         <span class="icon">
 
+                            <div class="container-total-carrinho badge-total-carrinho">8</div>
                             <i class="fas fa-shopping-bag"></i>
 
                         </span>
@@ -282,39 +292,39 @@
 
                 </div>
 
-                <div class="container-menu">
+                <div class="container-menu col-12 text-center">
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-burgers" class="btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('burgers')">
 
                         <i class="fas fa-hamburger"></i>&nbsp;Burguer
 
                     </a>
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-pizzas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')">
 
                         <i class="fas fa-pizza-slice"></i>&nbsp;Pizzas
 
                     </a>
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-churrasco" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('churrasco')">
 
                         <i class="fas fa-drumstick-bite"></i>&nbsp;Churrasco
 
                     </a>
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-steaks" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('steaks')">
 
                         <i class="fas fa-bacon"></i>&nbsp;Steaks
 
                     </a>
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-bebidas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('bebidas')">
 
                         <i class="fas fa-cocktail"></i>&nbsp;Bebidas
 
                     </a>
 
-                    <a class="btn-white btn-sm mr-3">
+                    <a id="menu-sobremesas" class="btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
 
                         <i class="fas fa-ice-cream"></i>&nbsp;Sorvete
 
@@ -326,301 +336,11 @@
 
                     <div class="row" id="itensCardapio">
 
-
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>X-Salada</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 20,20</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>X-Carne</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 35,99</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>X-Cheddar</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 25,50</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>Combo 2 X-Burguer</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 37,00</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>X-Frango</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 23,50</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>Combo 3 X-Bacon</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 34,90</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>Hamburger com mais carne</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 38,00</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-3 mt-4">
-
-                            <div class="card card-item">
-
-                                <div class="img-produto">
-
-                                    <img
-                                        src="./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg">
-
-                                </div>
-
-                                <p class="title-produto text-center mt-4">
-
-                                    <b>X-burguer simples</b>
-
-                                </p>
-
-                                <p class="price-produto text-center">
-
-                                    <b>R$: 20,00</b>
-
-                                </p>
-
-                                <div class="add-carrinho">
-
-                                    <span class="btn-menos"><i class="fas fa-minus"></i></span>
-                                    <span class="btn-numero-itens">0</span>
-                                    <span class="btn-mais"><i class="fas fa-plus"></i></span>
-                                    <span class="btn btn-add"><i class="fas fa-shopping-bag"></i></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
                     </div>
 
                     <div class="col-12 text-center mt-4">
+
                         <a id="btnVerMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.verMais()">Ver mais</a>
-                          
 
                     </div>
 
@@ -924,7 +644,7 @@
 
 
 
-    <div class="modal-full hidden"  id="modalCarrinho">
+    <div class="modal-full" id="modalCarrinho" hidden>
 
         <div class="m-header">
 
@@ -1271,69 +991,195 @@
 
                         </div>
 
-                    </div>
+                        <div class="col-6">
 
-                    <div id="resumoCarrinho" class="row mr-0 ml-0 ">
-
-                        <div class="col-12">
-
-                            <p class="title-carinho mt-4">
-
-                                <b>Itens do pedido:</b>
-
-                            </p>
-
-                        </div>
-                        <div class=" col-12">
-                            <div class="row" id="listaItensResumo">
-                                <div class=" col-12 item-carrinho resumo">
-                                    <div class="img-produto-resumo">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg">
-                                    </div>
-                                    <div class="dados-produto">
-                                        <p class="title-produto-resumo">
-                                            <b>
-                                                Nome do produto:
-                                            </b>
-                                        </p>
-                                        <p class="price-produto-resumo">
-                                            <b>R$ 100,00</b>
-                                        </p>
-                                    </div>
-                                    <p class="quantidade-produto-resumo">
-                                        x <b>3</b>
-                                    </p>
-                                </div>
-                                
+                            <div class="form-group">
+    
+                                <label>Cidade:</label>
+    
+                                <input id="txtCidade" type="text" class="form-control" />
+    
                             </div>
+    
                         </div>
-                        <div class="col-12">
-                                    <p class=" title-carinho mt-4">
-                                        <b>Local de entrega</b>
-                                    </p>
-                                </div>
-                                <div class="col-12 item-carrinho resumo">
-                                    <div class="img-map">
-                                        <i class=" fas fa-map-marked-alt"></i>
-                                    </div>
-                                    <div class="dados-produto">
-                                        <p class="texto-endereco">
-                                            <b id="resumoEndereco"> Rua Aloedil da Silva, bairro jd rondonia</b>
-                                        </p>
-                                        <p class="cidade-endereco" id="cidadeEndereco">
-                                            Rondonopolis MT CEP 78.730-504
-                                        </p>
-                                    </div>
-                                </div>
+    
+                        <div class="col-4">
+    
+                            <div class="form-group">
+    
+                                <label>Complemento:</label>
+    
+                                <input id="txtComplemento" type="text" class="form-control" />
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-2">
+    
+                            <div class="form-group">
+    
+                                <label>UF:</label>
+    
+                                <select id="DDluf" class="form-control">
+    
+                                    <option value=" ">...</option>
+    
+                                    <option value="AC">AC</option>
+    
+                                    <option value="AL">AL</option>
+    
+                                    <option value="AM">AM</option>
+    
+                                    <option value="AP">AP</option>
+    
+                                    <option value="BA">BA</option>
+    
+                                    <option value="CE">CE</option>
+    
+                                    <option value="DF">DF</option>
+    
+                                    <option value="ES">ES</option>
+    
+                                    <option value="GO">GO</option>
+    
+                                    <option value="MA">MA</option>
+    
+                                    <option value="MT">MT</option>
+    
+                                    <option value="MS">MS</option>
+    
+                                    <option value="MG">MG</option>
+    
+                                    <option value="PA">PA</option>
+    
+                                    <option value="PB">PB</option>
+    
+                                    <option value="PR">PR</option>
+    
+                                    <option value="PB">PB</option>
+    
+                                    <option value="PI">PI</option>
+    
+                                    <option value="RJ">RJ</option>
+    
+                                    <option value="RN">RN</option>
+    
+                                    <option value="RS">RS</option>
+    
+                                    <option value="RO">RO</option>
+    
+                                    <option value="RR">RR</option>
+    
+                                    <option value="SC">SC</option>
+    
+                                    <option value="SP">SP</option>
+    
+                                    <option value="SE">SE</option>
+    
+                                    <option value="TO">TO</option>
+    
+                                </select>
+    
+                            </div>
+                            
+                        </div>
+
                     </div>
+
+                </div>
+
+                <div id="resumoCarrinho" class="row mr-0 ml-0 ">
+
+                    <div class="col-12">
+
+                        <p class="title-carinho mt-4">
+
+                            <b>Itens do pedido:</b>
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="row" id="listaItensResumo">
+
+                            <div class="col-12 item-carrinho resumo">
+
+                                <div class="img-produto-resumo">
+
+                                    <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg">
+
+                                </div>
+
+                                <div class="dados-produto">
+
+                                    <p class="title-produto-resumo">
+
+                                        <b>Nome do produto</b>
+
+                                    </p>
+
+                                    <p class="price-produto-resumo">
+
+                                        <b>R$: 100,00</b>
+
+                                    </p>
+
+                                </div>
+
+                                <p class="quantidade-produto-resumo">
+
+                                    x <b>3</b>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    
+
+                        <div class="col-12">
+
+                            <p class="title-carrinho mt-4">
+    
+                                <b>Local da entrega</b>
+    
+                            </p>
+    
+                        </div>
+    
+                        <div class="col-12 item-carrinho resumo">
+    
+                            <div class="img-map">
+    
+                                <i class="fas fa-map-marked-alt"></i>
+    
+                            </div>
+    
+                            <div class="dados-produto">
+    
+                                <p class="texto-endereco">
+    
+                                    <b id="resumoEndereeco">Rua Aloedil da Silva, bairro Jd Rondônia</b>
+    
+                                </p>
+    
+                                <p class="cidade-endereco" id="cidadeEndereco">Rondonópolis-MT CEP 78.730-504</p>
+    
+                            </div>
+        
+                        </div>
+
+                    </div>  
 
                 </div>
 
             </div>
 
         </div>
-
-
 
 
         <div class="m-footer">
@@ -1384,15 +1230,17 @@
 
     </div>
 
-    <script type="text/javascripy" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
 
-    <script type="text/javascripy" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
 
-    <script type="text/javascripy" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
-    <script type="text/javascripy" src="./js/popper.min.js"></script>
-    <script type="text/javascripy" src="./js/dados.js"></script>
-    
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+
+    <script type="text/javascript" src="./js/dados.js"></script>
+
+    <script type="text/javascript" src="./js/add.js"></script>
 
 </body>
 
